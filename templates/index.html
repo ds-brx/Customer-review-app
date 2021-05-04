@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<section id="main">
+		<nav>
+			<h1>ReviewBeta</h1>
+
+			<ul class="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Result</a></li>
+			</ul>
+		</nav>
+
+		<section id="intro">
+			<img src="{{url_for('static', filename='Twitter.jpg')}}" >
+      <div class="desc-text">
+        <h1 class="center">Twitter Sentiment Analysis</h1>
+        <p>Sentiment analysis is the process of detecting positive or negative sentiment in text. It’s often used by businesses to detect sentiment in social data, gauge brand reputation, and understand customers.<br>Twitter sentiment analysis systems allow you to sort large sets of tweets and detect the polarity of each statement automatically.</p>
+      </div>
+    </section>
+
+    <section id="search">
+  	  <h1 class="center">Enter the Topic of Tweets for Sentiment Analysis.</h1>
+		  <form action = "{{ url_for('index')}}" method="POST">
+			  <textarea wrap="off" overflow="hidden" name="Tweet_URL" placeholder="Enter here..." rows="1" cols="50"></textarea>
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </section>
+		
+    <section id="vid">
+      <img src="{{url_for('static', filename='example.gif')}}" >
+    </section>
+
+    <footer>
+      <div class="foot">
+        <h1 class="center">Project done by</h1>
+      
+        <div class="people">
+          <div class="person">
+            <p>Ujjwal Puri</p>
+            <div class="social">
+              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+      
+          <div class="person">
+            <p>Hansika Sachdeva</p>
+            <div class="social">
+              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="person">
+            <p>Breenda Das</p>
+            <div class="social">
+              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="center">View source code <a href="#">here</a></h4>
+        <p class="center">Copyright &copy; 2021</p>
+      </div>
+    </footer>
+  </section>
+</body>
+</html>

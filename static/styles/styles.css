@@ -1,0 +1,146 @@
+* {
+    font-family: poppins;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  nav {
+    width: 100%;
+      display: flex;
+      justify-content: space-around; 
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.02);
+    z-index: 1;
+  }
+  
+  .menu {
+      display: flex;
+    justify-content: space-evenly;
+      list-style: none;
+  }
+  
+  .menu li a {
+    height: 40px;
+    margin: 3px;
+    line-height: 43px;
+    padding: 5px 22px;
+    border-radius: 5px;
+    color: grey;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+  }
+  
+  .menu li a:hover {
+    background-color: #4ea0ec;
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  #intro {
+    color: white;
+    background-color: #4ea0ec; 
+    margin-bottom: 0px; 
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #intro img {
+    width: 25%;
+    height: auto;
+    margin-left: 50px;
+  }
+  
+  #intro .desc-text {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+  
+  #search {
+    padding: 20px;
+    margin: auto;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  form button {
+    border-radius: 100px;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background: #4ea0ec;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #0b7dda;
+  }
+  
+  textarea {
+    overflow: hidden;
+    resize: none;
+    border-radius: 60px;  
+    padding: 10px 0px 10px 10px;
+  }
+  
+  textarea:focus {
+    outline: none;
+  }
+  
+  #vid {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .foot {
+    background-color: rgb(228, 228, 228);
+    padding: 30px 0px 10px 0px;
+  }
+  
+  .foot h1 {
+    margin-bottom: 0px;
+  }
+  
+  .foot .people {
+    display: flex; 
+    justify-content: space-evenly;
+  }
+  
+  .foot .people .person {
+    margin: 0px 25px;
+  }
+  
+  .social {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0px;
+  }
+  
+  .foot h4 {
+    margin-top: 30px;
+  }
+  
+  .foot a {
+    color: #0065c4;
+  }
