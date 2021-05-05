@@ -71,6 +71,8 @@ def login_twitter(driver,username,my_password):
         print("Timeout while waiting for home screen")
     return driver
 
+## Ref : https://github.com/israel-dryer/Twitter-Scraper/blob/main/twitter_scraper.py
+
 def scroll_down_page(driver, last_position, num_seconds_to_load=0.5, scroll_attempt=0, max_attempts=5):
     """The function will try to scroll down the page and will check the current
     and last positions as an indicator. If the current and last positions are the same after `max_attempts`
