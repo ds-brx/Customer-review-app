@@ -154,8 +154,8 @@ def main(username, password, filepath,post_url):
 
 
 if __name__ == '__main__':
-    usr = "breenda.das@gmail.com"
-    pwd = "Bree@1807"
+    usr = ""
+    pwd = ""
     file_path = 'collected_data.csv'
     post_url = 'https://twitter.com/narendramodi/status/1389162292022063106'
 
