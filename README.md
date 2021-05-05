@@ -46,7 +46,7 @@ Analysing twitter comments for a company's post is an indispensable resource of 
   <li> Work further to train the model on different languages. </li>
   <li> Feature engineering for better deduced insights. </li>
   <li> Optimise the bot for quicker and more efficient scraping process. </li>
-  <li> Analysis of giphys or images posted for added semantic understanding </li>
+  <li> Analysis of giphys or images posted for added semantic understanding. </li>
   </ul>
   
   
