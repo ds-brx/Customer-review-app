@@ -29,7 +29,7 @@ Analysing twitter comments for a company's post is an indispensable resource of 
   <li> Demo : Paste it to the form and click on search button.</li>
   <li> Demo: Insight 1.1: Sentiment analysis of tweets posted by date time sequence.</li>
   <li> Insight 1.2</li>
-  <li> Insight 2: Graph depicting reply comment likes, replies, retweets and the tweet for represeting popularity of the comment feedbacks.</li>
+  <li> Insight 2: Graph depicting reply comment likes, replies, retweets and the tweet for representing popularity of the comment feedbacks.</li>
   <li> Insight 3: Sentiment score of top 5 comments for a popular opinion analysis. </li>
 </ul>
 
