@@ -13,8 +13,8 @@ from get_sentimet import generate_sentiments
 from clean_collected_data import preprocess_data
 
 URL = ''
-usr = "breenda.das@gmail.com"
-pwd = "Bree@1807"
+usr = ""
+pwd = ""
 file_path = 'collected_data.csv'
 
 markdown_text1 = '''
