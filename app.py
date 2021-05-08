@@ -15,7 +15,7 @@ from clean_collected_data import preprocess_data
 URL = ''
 usr = ""
 pwd = ""
-file_path = 'collected_data.csv'
+file_path = './Customer-review-app/collected_data.csv'
 
 markdown_text1 = '''
 # Insights on your Twitter Post

@@ -149,7 +149,7 @@ def load_pretrained_model(TEXT_FIELD):
                 BIDIRECTIONAL, 
                 DROPOUT, 
                 PAD_IDX)
-    model.load_state_dict(torch.load('./trained_model.pt',map_location='cpu'))
+    model.load_state_dict(torch.load('./Customer-review-app/trained_model.pt',map_location='cpu'))
     model.eval()
     model.embedding.weight.data.copy_(TEXT_FIELD.vocab.vectors)
 
@@ -180,7 +180,7 @@ def generate_sentiment_predictions(model,test_list,TEXT):
 def generate_sentiments(df):
     df = df[df['comment'].notna()]
     X = clean_sentiment_data(df['comment'])
-    with open("./TEXT.Field","rb")as f:
+    with open("./Customer-review-app/TEXT.Field","rb")as f:
      TEXT=dill.load(f)
     model = load_pretrained_model(TEXT)
     predictions = generate_sentiment_predictions(model,X,TEXT)

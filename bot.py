@@ -8,16 +8,23 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.common import exceptions
 from time import sleep 
-
+from selenium import webdriver
+import os
 
 comment_data_list = []
 unique_tweets = set()
 
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+
+
 def get_post_url(driver,url):
     driver.get(url)
     return driver 
-
-
 
 def get_tweet_id(tweet):
      return ''.join(tweet)
@@ -45,10 +52,6 @@ def get_scraped_list(reply_cards):
             if data_id not in unique_tweets:
                 unique_tweets.add(data_id)
                 comment_data_list.append(data)
-    
-def get_webdriver_instance ():
-    driver = Chrome('./chromedriver')
-    return driver
 
 def login_twitter(driver,username,my_password):
     login_url = 'https://twitter.com/login'
@@ -116,7 +119,6 @@ def save_data(scraped_list,filename):
     comment_data_df.to_csv(filename)
 
 def main(username, password, filepath,post_url):
-    driver = get_webdriver_instance ()
     driver = login_twitter(driver,username,password)
     driver = get_post_url(driver, post_url)
     last_position = None
@@ -156,7 +158,7 @@ def main(username, password, filepath,post_url):
 if __name__ == '__main__':
     usr = ""
     pwd = ""
-    file_path = 'collected_data.csv'
+    file_path = './Customer-review-app/collected_data.csv'
     post_url = 'https://twitter.com/narendramodi/status/1389162292022063106'
 
     main(usr, pwd,file_path,post_url)

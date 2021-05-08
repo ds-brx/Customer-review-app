@@ -6,7 +6,7 @@ def convert_str(col):
     return col
 
 def preprocess_data():
-    data = pd.read_csv('collected_data.csv')
+    data = pd.read_csv('./Customer-review-app/collected_data.csv')
     data = data.fillna('0')
     float_list = ['comment_likes','comment_retweets','comment_replies']
     for x in float_list:
